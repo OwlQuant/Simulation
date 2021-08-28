@@ -1,1 +1,0 @@
-# Geometric Brownian Motion
