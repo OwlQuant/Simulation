@@ -4,10 +4,6 @@ Numpy based fast library for
 * Simulating Stock Prices
 * Constructing Portfolios 
 
-### similation.StockPrice
-
-
-### similation.Portfolio
 
 ## Examples:
 Geometic Brownian Motion
@@ -40,7 +36,7 @@ sim.StockPrice.simulate_price(start_date=dt.date(2021,1,1), end_date=dt.date(202
 
 # Simulate 3 stocks with provided tickers and granular control of parameters
 sim.StockPrice.simulate_price(start_date=dt.date(2021,1,1), end_date=dt.date(2025,1,1),
-                              start_price=np.array([1000, 500, 200]), ticker=['AAPL', 'FB', 'GOOG'],
+                              start_price=np.array([750, 500, 200]), ticker=['AAPL', 'FB', 'MMM'],
                               vol_ann=np.array([.10, .10, 0.10]), rf=0.01,
                               corr=np.array([[1, .75, .5], [.75, 1, -.10], [.5, -.1, 1]]),
                               melted_output=False)
