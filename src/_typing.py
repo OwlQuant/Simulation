@@ -1,4 +1,4 @@
-from typing import Union
+from typing import Union, Any
 import numpy as np
 import pandas as pd
 import datetime as dt
@@ -17,4 +17,4 @@ Frame = pd.DataFrame
 Series = pd.Series
 
 BoolType = bool
-
+Any = Union[Any]

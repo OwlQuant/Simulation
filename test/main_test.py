@@ -63,18 +63,19 @@ def portfolio_test2():
     # print("Portfolio simulation")
     start_date = dt.date(2021, 1, 1)
     end_date = dt.date(2022, 1, 1)
-    num_stocks = 500
+    num_stocks = 10
     nav = 100000
     portfolio = sim.Portfolio.from_num_positions(num_stocks, nav)
     tickers = np.array(portfolio.positions.index)
     initial_values = portfolio.positions.to_numpy().flatten()
 
     df_prices = sim.StockPrice.simulate_price(start_date=start_date, end_date=end_date, start_price=initial_values,
-                                              ticker=tickers)
+                                              ticker=tickers, melted_output=False)
     # print(positions)
     df = portfolio._simulate(df_prices)
     df = portfolio.portfolio_value(df_prices)
     # print(df)
+    # jsout = df_prices.reset_index().to_json(orient='records')  # to get json records out
     return df
 
 

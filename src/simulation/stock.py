@@ -20,7 +20,7 @@ class StockPrice:
         :return: Nx1 numpy array of simulated prices
         """
         num_stocks = len(s0) if isinstance(s0, (list, np.ndarray)) else 1
-        if not isinstance(corr, np.ndarray) and corr == 0.0:
+        if not isinstance(corr, np.ndarray) and corr == 0.0:  # todo use np.ndim()
             rand_matrix = np.random.standard_normal([n_paths, num_stocks])
         else:
             means = np.zeros(num_stocks)
