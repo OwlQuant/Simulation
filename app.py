@@ -4,8 +4,8 @@ from flask import Flask, request, jsonify
 import numpy as np
 
 # import simulation.stock as stock
-import simulation as sim
-
+import Simulation.src.simulation as sim
+# from simulation import .src.simulation import gbm
 app = Flask(__name__)
 
 @app.route('/api/gbm/v1', methods=['GET'])
