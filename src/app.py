@@ -2,7 +2,7 @@
 from flask import Flask, request, jsonify
 # import json
 import numpy as np
-
+from src import simulation as sim
 # import simulation.stock as stock
 # import src.simulation as sim
 # from simulation import .src.simulation import gbm
@@ -37,8 +37,8 @@ def gbm_simulation():
         print("Could not parse s into float/[float]: " + s_raw)
         s = [1000]
     s = np.array(s)
-    #gbm = sim.StockPrice.gbm(s0=s, vol=v_raw, t=t_raw, rf=r_raw, corr=c_raw, n_paths=n_raw)
-    gbm = None
+    gbm = sim.StockPrice.gbm(s0=s, vol=v_raw, t=t_raw, rf=r_raw, corr=c_raw, n_paths=n_raw)
+    # gbm = None
     # print(s_raw,v_raw,t_raw, r_raw, c_raw, n_raw)
     # gbm = sim.StockPrice.gbm(s0=1000, vol=0.2, t=1.1, rf=0.01, n_paths=10)
 
