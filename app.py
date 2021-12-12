@@ -7,7 +7,7 @@ import numpy as np
 # import src.simulation as sim
 # from simulation import .src.simulation import gbm
 from src import simulation as sim
-app = Flask(__name__)
+app = Flask(__name__, static_folder="./src")
 
 @app.route('/api/gbm/v1', methods=['GET'])
 def gbm_simulation():
