@@ -2,7 +2,7 @@
 import simulation as sim
 import numpy as np
 import pandas as pd
-from _typing import Float, Int, Array2d, Array1d, FloatOrNpArray, Frame, DateType, BoolType
+from util._typing import Float, Int, Frame
 
 
 class Portfolio:

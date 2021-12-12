@@ -1,7 +1,7 @@
 import datetime as dt
 import numpy as np
 import pandas as pd
-from _typing import Float, Int, Array2d, FloatOrNpArray, DateType, BoolType
+from util._typing import Float, Int, Array2d, FloatOrNpArray, DateType, BoolType
 
 
 class StockPrice:
