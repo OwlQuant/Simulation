@@ -6,7 +6,8 @@ import numpy as np
 # import simulation.stock as stock
 # import src.simulation as sim
 # from simulation import .src.simulation import gbm
-from src import simulation as sim
+# from src import simulation as sim
+import simulation as sim
 app = Flask(__name__, static_folder="./src")
 
 @app.route('/api/gbm/v1', methods=['GET'])
