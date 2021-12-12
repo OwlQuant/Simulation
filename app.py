@@ -2,13 +2,14 @@
 from flask import Flask, request, jsonify
 # import json
 import numpy as np
-from src import simulation as sim
+import simulation as sim
+
 # import simulation.stock as stock
 # import src.simulation as sim
 # from simulation import .src.simulation import gbm
 # from src import simulation as sim
 # import simulation as sim
-app = Flask(__name__, static_folder="./src")
+app = Flask(__name__)
 
 @app.route('/api/gbm/v1', methods=['GET'])
 def gbm_simulation():
