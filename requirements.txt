@@ -1,5 +1,6 @@
 Click
 Flask
+flask-cors
 gunicorn
 itsdangerous
 Jinja2

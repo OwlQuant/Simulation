@@ -1,5 +1,6 @@
 # app.py
 from flask import Flask, request, jsonify
+from flask_cors import CORS, cross_origin
 import datetime as dt
 import numpy as np
 import pandas as pd
@@ -11,8 +12,11 @@ import simulation as sim
 # from src import simulation as sim
 # import simulation as sim
 app = Flask(__name__)
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 @app.route('/api/gbm/v1', methods=['GET'])
+@cross_origin()
 def gbm_simulation():
     """
     Generate GBM Simulation using parameters from request
@@ -55,6 +59,7 @@ def gbm_simulation():
     return jsonify(gbm.tolist())
 
 @app.route('/api/stockprice/v1', methods=['GET'])
+@cross_origin()
 def stock_simulation():
     """
     Generate Stock Simulation using parameters from request
