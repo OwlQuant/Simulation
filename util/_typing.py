@@ -4,8 +4,8 @@ import pandas as pd
 import datetime as dt
 
 DateType = dt.date
-Int = Union[int, np.int]
-Float = Union[float, np.float]
+Int = Union[int, np.integer]
+Float = Union[float, np.float32]
 IntFloat = Union[Int, Float]
 
 Array = np.ndarray  # ready to be used for n-dim data
