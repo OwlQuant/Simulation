@@ -115,7 +115,8 @@ class StockPrice:
                        end_date: DateType = dt.date.today() + dt.timedelta(days=365),
                        start_price: FloatOrNpArray = 250.0, vol_ann: FloatOrNpArray = 0.20, rf: FloatOrNpArray = 0.02,
                        ticker=None,
-                       corr: FloatOrNpArray = 0.0, include_weekend: BoolType = False, melted_output: BoolType = True):
+                       corr: FloatOrNpArray = 0.0, include_weekend: BoolType = False,
+                       melted_output: BoolType = True) -> Frame:
         """
         Simulate daily stock prices based on parameters.
         Returns one set of prices between start and end date for all the instruments requested (based on #elements in start_price)
